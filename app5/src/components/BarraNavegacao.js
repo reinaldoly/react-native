@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+export default class BarraNavegacao extends Component {
+  render() {
+    return (
+      <View style={styles.barraTitulo}>
+          <Text style={styles.titulo}>ATM Consultoria</Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+    barraTitulo: {
+        backgroundColor: '#CCC',
+        padding: 10,
+        height: 60
+    },
+    titulo: {
+        fontSize: 18,
+        flex: 1,
+        textAlign: 'center',
+        color: '#000'
+    }
+});
