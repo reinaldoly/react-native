@@ -3,32 +3,26 @@ import { View, StatusBar, Image, Text, StyleSheet } from 'react-native';
 
 import BarraNavegacao from './BarraNavegacao';
 
-const detalheClientes = require('../imgs/detalhe_cliente.png');
-const Cliente1 = require('../imgs/cliente1.png');
-const Cliente2 = require('../imgs/cliente2.png');
+const detalheEmpresa = require('../imgs/detalhe_empresa.png');
 
-
-export default class CenaClientes extends Component {
+export default class CenaEmpresa extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <StatusBar
                     //hidden
-                    backgroundColor="#B9C941"
+                    backgroundColor="#EC7148"
                 />
-                <BarraNavegacao voltar navigator={this.props.navigator} corDeFundo="#B9C941" />
+                <BarraNavegacao voltar navigator={this.props.navigator} corDeFundo="#EC7148" />
 
                 <View style={styles.cabecalho}>
-                    <Image source={detalheClientes} />
-                    <Text style={styles.txtTitulo}>Nossos Clientes</Text>
+                    <Image source={detalheEmpresa} />
+                    <Text style={styles.txtTitulo}>A Empresa</Text>
                 </View>
                 <View style={styles.subTexto}>
-                    <Image source={Cliente1} />
-                    <Text style={styles.txtSub}>Lorem ipsum dolorem</Text>
-                </View>
-                <View style={styles.subTexto}>
-                    <Image source={Cliente2} />
-                    <Text style={styles.txtSub}>Lorem ipsum dolorem</Text>
+                    <Text style={styles.txtSub}>
+                        A ATM consultoria está no mercado a mais de 20 anos...
+                    </Text>
                 </View>
             </View>
         );
@@ -46,7 +40,7 @@ const styles = StyleSheet.create({
     },
     txtTitulo: {
         fontSize: 30,
-        color: '#B9C941',
+        color: '#EC7148',
         marginLeft: 10,
         marginTop: 25
     },

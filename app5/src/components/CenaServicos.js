@@ -3,32 +3,26 @@ import { View, StatusBar, Image, Text, StyleSheet } from 'react-native';
 
 import BarraNavegacao from './BarraNavegacao';
 
-const detalheClientes = require('../imgs/detalhe_cliente.png');
-const Cliente1 = require('../imgs/cliente1.png');
-const Cliente2 = require('../imgs/cliente2.png');
+const detalheServicos = require('../imgs/detalhe_servico.png');
 
-
-export default class CenaClientes extends Component {
+export default class CenaServicos extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <StatusBar
                     //hidden
-                    backgroundColor="#B9C941"
+                    backgroundColor="#19D1C8"
                 />
-                <BarraNavegacao voltar navigator={this.props.navigator} corDeFundo="#B9C941" />
+                <BarraNavegacao voltar navigator={this.props.navigator} corDeFundo="#19D1C8" />
 
                 <View style={styles.cabecalho}>
-                    <Image source={detalheClientes} />
-                    <Text style={styles.txtTitulo}>Nossos Clientes</Text>
+                    <Image source={detalheServicos} />
+                    <Text style={styles.txtTitulo}>Nossos Serviços</Text>
                 </View>
                 <View style={styles.subTexto}>
-                    <Image source={Cliente1} />
-                    <Text style={styles.txtSub}>Lorem ipsum dolorem</Text>
-                </View>
-                <View style={styles.subTexto}>
-                    <Image source={Cliente2} />
-                    <Text style={styles.txtSub}>Lorem ipsum dolorem</Text>
+                    <Text style={styles.txtSub}>- Consultoria</Text>
+                    <Text style={styles.txtSub}>- Processos</Text>
+                    <Text style={styles.txtSub}>- Acompanhamento de projetos</Text>
                 </View>
             </View>
         );
@@ -46,7 +40,7 @@ const styles = StyleSheet.create({
     },
     txtTitulo: {
         fontSize: 30,
-        color: '#B9C941',
+        color: '#19D1C8',
         marginLeft: 10,
         marginTop: 25
     },
